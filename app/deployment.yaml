@@ -14,9 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          # built, tagged, and loaded into kind locally.
-          # not container registry yet.
-          image: test-argo-api:dev
+          image: ghcr.io/hosackm/test-argo-api:dev
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
