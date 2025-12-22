@@ -12,6 +12,8 @@ spec:
       labels:
         app: test-argo-api
     spec:
+      imagePullSecrets:
+        - name: ghcr-creds
       containers:
         - name: api
           image: ghcr.io/hosackm/test-argo-api:dev
