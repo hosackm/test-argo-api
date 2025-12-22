@@ -19,7 +19,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	type HelloResponse struct {
 		Msg string `json:"msg"`
 	}
-	json.NewEncoder(w).Encode(HelloResponse{"hello Matt!"})
+	json.NewEncoder(w).Encode(HelloResponse{"Hello, Matt!"})
 }
 
 func main() {
