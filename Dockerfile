@@ -5,7 +5,7 @@ COPY go.mod ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build -o server
+RUN GOOS=linux GOARCH=arm64 CGO_ENABLED=0 go build -o server
 
 FROM gcr.io/distroless/base-debian12
 
