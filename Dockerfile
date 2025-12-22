@@ -5,13 +5,14 @@ COPY go.mod ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o app
+RUN CGO_ENABLED=0 go build -o server
 
 FROM gcr.io/distroless/base-debian12
 
 WORKDIR /app
-COPY --from=builder /app/app .
-EXPOSE 8080
+COPY --from=builder /app/server .
 
 USER nonroot:nonroot
-CMD ["./app"]
+EXPOSE 8000
+
+CMD ["./server"]
