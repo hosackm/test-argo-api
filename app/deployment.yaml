@@ -16,7 +16,7 @@ spec:
         - name: ghcr-creds
       containers:
         - name: api
-          image: ghcr.io/hosackm/test-argo-api:sha-e9f7ece
+          image: ghcr.io/hosackm/test-argo-api:sha-a65380a
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
