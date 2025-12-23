@@ -19,4 +19,4 @@ spec:
           image: ghcr.io/hosackm/test-argo-api:sha-e9f7ece
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 80
+            - containerPort: 8000
